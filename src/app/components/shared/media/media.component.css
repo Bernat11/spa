@@ -1,0 +1,18 @@
+#logo{
+    height: 80px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+#social-media{
+    float: right;
+    margin-top: 30px;
+    margin-right: 5%;
+}
+
+.media{
+    height: 30px;
+    padding-left: 12px;
+    display: inline-block;
+}
