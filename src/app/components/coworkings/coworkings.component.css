@@ -1,0 +1,23 @@
+.cortarImg {
+    height: 250px;
+    width: 300px;
+    object-fit: cover;
+}
+
+.card {
+    float: left;
+    width: 300px;
+    height: 500px;
+    margin-bottom: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.cardContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+
