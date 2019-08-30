@@ -19,5 +19,11 @@
     flex-direction: row;
 }
 
+.button{
+    width: 120px;
+    position: absolute;
+    bottom: 10px;
+}
+
 
 

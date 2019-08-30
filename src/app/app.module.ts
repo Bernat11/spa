@@ -15,6 +15,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { MediaComponent } from './components/shared/media/media.component';
 import { ComparatorComponent } from './components/comparator/comparator.component';
 import { CoworkingsComponent } from './components/coworkings/coworkings.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CoworkingsComponent } from './components/coworkings/coworkings.componen
     NavbarComponent,
     MediaComponent,
     ComparatorComponent,
-    CoworkingsComponent
+    CoworkingsComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
