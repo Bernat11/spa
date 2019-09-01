@@ -12,7 +12,7 @@ export class CoworkingsComponent implements OnInit {
 
 
   constructor(public coworkingsService: CoworkingsService) {
-
+    
   }
 
   ngOnInit() {

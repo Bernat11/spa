@@ -1,14 +1,9 @@
 <div class="row cardContainer">
-  <div *ngFor="let coworking of coworkings; let i = index" class="card">
-    <img class="card-img-top cortarImg" [src]="coworking.img" [alt]="">
+  <div *ngFor="let coworking of coworkings" class="card">
+    <img class="card-img-top cortarImg" [src]="coworking.img[0]" [alt]="">
     <div class="card-body">
-      <h4 class="card-title">{{ coworking.name }}</h4>
+      <h4 class="card-title"><a [routerLink]="['/coworking',i]">{{ coworking.name }}</a></h4>
       <p class="card-text"> {{ coworking.description }} </p>
-     
-      <button type="button" class="btn btn-outline-primary btn-block button">More info!</button>
-      <!-- <a [routerLink]="['/heroe',i]" class="btn btn-outline-primary">Ver más link...</a> -->
-  
     </div>
   </div>
-</div> 
-
+</div>

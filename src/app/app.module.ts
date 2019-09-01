@@ -15,7 +15,10 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { MediaComponent } from './components/shared/media/media.component';
 import { ComparatorComponent } from './components/comparator/comparator.component';
 import { CoworkingsComponent } from './components/coworkings/coworkings.component';
+import { CoworkingComponent } from './components/coworking/coworking.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
+import { AlgorythmComponent } from './components/algorythm/algorythm.component';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +29,8 @@ import { FooterComponent } from './components/shared/footer/footer.component';
     ComparatorComponent,
     CoworkingsComponent,
     FooterComponent,
+    CoworkingComponent,
+    AlgorythmComponent,
   ],
   imports: [
     BrowserModule,
