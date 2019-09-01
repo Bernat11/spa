@@ -1,5 +1,5 @@
 <div class="row cardContainer">
-  <div *ngFor="let coworking of coworkings" class="card">
+  <div *ngFor="let coworking of coworkings; index as i" class="card">
     <img class="card-img-top cortarImg" [src]="coworking.img[0]" [alt]="">
     <div class="card-body">
       <h4 class="card-title"><a [routerLink]="['/coworking',i]">{{ coworking.name }}</a></h4>
