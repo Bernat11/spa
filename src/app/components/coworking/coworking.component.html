@@ -1,5 +1,11 @@
+<h2>{{coworking.name}}</h2>
+
 <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
   <mdb-carousel-item *ngFor="let img of images; index as i">
     <img class="d-block w-100 cortarImg" src={{images[i]}} alt="First slide">
   </mdb-carousel-item>
 </mdb-carousel>
+
+<div>
+  <p>{{coworking.description}}</p>
+</div>
