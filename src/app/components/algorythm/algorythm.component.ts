@@ -12,4 +12,7 @@ export class AlgorythmComponent implements OnInit {
   ngOnInit() {
   }
 
+  districts: Array<String> = ['Ciutat Vella', 'Eixample', 'Sants-Montjuïc', 'Les Corts', 
+  'Sarrià-Sant Gervasi', 'Gràcia', 'Horta-Guinardó', 'Nou Barris', 'Sant Andreu', '	Sant Martí']
+
 }

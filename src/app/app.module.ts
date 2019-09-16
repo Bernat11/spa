@@ -18,6 +18,8 @@ import { CoworkingsComponent } from './components/coworkings/coworkings.componen
 import { CoworkingComponent } from './components/coworking/coworking.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { AlgorythmComponent } from './components/algorythm/algorythm.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { MatSliderModule } from '@angular/material/slider';
 
 
 @NgModule({
@@ -36,7 +38,9 @@ import { AlgorythmComponent } from './components/algorythm/algorythm.component';
     BrowserModule,
     AppRoutingModule,
     MDBBootstrapModule.forRoot(),
-    APP_ROUTING
+    APP_ROUTING,
+    BrowserAnimationsModule,
+    MatSliderModule
   ],
   schemas:[NO_ERRORS_SCHEMA],
   providers: [],
