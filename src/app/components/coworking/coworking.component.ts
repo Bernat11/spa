@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CoworkingsService, Coworking } from 'src/app/services/coworkings.service';
+import {Observable} from 'rxjs';
+import {map} from 'rxjs/operators';
 
 @Component({
   selector: 'app-coworking',
@@ -9,19 +11,21 @@ import { CoworkingsService, Coworking } from 'src/app/services/coworkings.servic
 })
 export class CoworkingComponent implements OnInit {
 
-  coworking: Coworking;
-  images: String[];
+  private coworking:Coworking;
+  private images:Array<String>;
+  private id: string;
 
-  constructor( private activatedRoute: ActivatedRoute, private coworkingsService: CoworkingsService) {
-    this.activatedRoute.params.subscribe( params => {
-      console.log(coworkingsService.getCoworking(params.id))
-      this.coworking = this.coworkingsService.getCoworking(params.id);
-      this.images = this.coworking.img;
+  constructor(private activatedRoute: ActivatedRoute, private coworkingsService: CoworkingsService) {
+    this.id = this.activatedRoute.snapshot.params.id;
+    this.coworkingsService.getCoworking(this.id).subscribe((data:Coworking)=>{
+      this.coworking = data;
+      this.images = data.imagePath;
       console.log(this.images)
-    } )
+    })
   }
 
-  ngOnInit() {
+  ngOnInit() {    
+  
   }
 
 }

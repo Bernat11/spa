@@ -16,8 +16,7 @@ export class CoworkingsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.coworkings = this.coworkingsService.getCoworkings();
-    console.log(this.coworkings);
+    this.coworkingsService.getCoworkings();
   }
   
 }

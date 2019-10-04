@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA  } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 // Rutas
 import { APP_ROUTING } from './app.routes';
@@ -40,7 +41,8 @@ import { MatSliderModule } from '@angular/material/slider';
     MDBBootstrapModule.forRoot(),
     APP_ROUTING,
     BrowserAnimationsModule,
-    MatSliderModule
+    MatSliderModule,
+    HttpClientModule
   ],
   schemas:[NO_ERRORS_SCHEMA],
   providers: [],
