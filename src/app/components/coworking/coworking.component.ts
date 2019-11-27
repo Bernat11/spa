@@ -12,15 +12,20 @@ import {map} from 'rxjs/operators';
 export class CoworkingComponent implements OnInit {
 
   private coworking:Coworking;
-  private images:Array<String>;
   private id: string;
+  private name:String;
+  private description:String;
+  images: String[];
 
   constructor(private activatedRoute: ActivatedRoute, private coworkingsService: CoworkingsService) {
     this.id = this.activatedRoute.snapshot.params.id;
-    this.coworkingsService.getCoworking(this.id).subscribe((data:Coworking)=>{
-      this.coworking = data;
-      this.images = data.imagePath;
-      console.log(this.images)
+    console.log(this.id)
+    this.coworkingsService.getCoworking(this.id).subscribe((data:any)=>{
+      this.name = data.name;
+      this.description = data.description;
+      console.log(data)
+      this.images = data.imagePath.split(',');
+      console.log("images",this.images)
     })
   }
 

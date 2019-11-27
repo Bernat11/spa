@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,9 +8,6 @@ import { Observable } from 'rxjs';
 export class CoworkingsService {
 
   private httpClient:HttpClient;
-  private coworking:any;
-
-  private coworking2:Coworking[] = []
 
   private coworking3:Coworking[] = [
     {
@@ -76,12 +73,11 @@ export class CoworkingsService {
     this.getCoworkings();
   }
 
-  getCoworkings(){
-    this.httpClient.get(`http://localhost:8080/api/v1/coworkings`).subscribe(data=>{
-    })
+  getCoworkings():Observable<Object>{
+    return this.httpClient.get(`http://localhost:8080/api/v1/coworkings`);
   }
 
-  getCoworking( id: string ){
+  getCoworking( id: string ):Observable<Object>{
     return this.httpClient.get(`http://localhost:8080/api/v1/coworkings/${id}`);
   }
 }
