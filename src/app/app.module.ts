@@ -21,6 +21,7 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { AlgorythmComponent } from './components/algorythm/algorythm.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatSliderModule } from '@angular/material/slider';
+import { AgmCoreModule } from '@agm/core';
 
 
 @NgModule({
@@ -42,7 +43,10 @@ import { MatSliderModule } from '@angular/material/slider';
     APP_ROUTING,
     BrowserAnimationsModule,
     MatSliderModule,
-    HttpClientModule
+    HttpClientModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCiL4UvXT99dAEKg3Zp8fvhEqRwcTY4Ia8'
+    })
   ],
   schemas:[NO_ERRORS_SCHEMA],
   providers: [],
