@@ -1,5 +1,12 @@
 footer{
   bottom:0px;
-  background-color:pink;
   width:100%;
-  }
+}
+
+.background-color{
+  background-color: #ef5c4e;
+}
+
+.text-color{
+  color: black;
+}

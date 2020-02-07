@@ -1,0 +1,42 @@
+<div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item slides active">
+        <mdb-carousel class="carousel slide carousel-fade overlay" [animation]="fade">
+            <mdb-carousel-item *ngFor="let img of images; index as i">
+                <img class="cortarImg" src={{images[i]}} alt="" width="100%">
+            </mdb-carousel-item>
+        </mdb-carousel>
+        <div class="hero">
+          <hgroup>
+              <h1>My coworkings</h1>        
+              <h3>Encuentra tu espacio</h3>
+          </hgroup>
+          <button class="btn btn-hero btn-lg" role="button">Descubre tu sitio</button>
+        </div>
+      </div>
+    </div> 
+  </div>
+
+
+
+
+<!--
+<mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
+    <mdb-carousel-item>
+      <video class="video-fluid cortarImg" autoplay loop muted>
+        <source src="https://mdbootstrap.com/img/video/Tropical.mp4" type="video/mp4" />
+      </video>
+    </mdb-carousel-item>
+    <mdb-carousel-item>
+      <video class="video-fluid cortarImg" autoplay loop muted>
+        <source src="https://mdbootstrap.com/img/video/forest.mp4" type="video/mp4" />
+      </video>
+    </mdb-carousel-item>
+    <mdb-carousel-item>
+      <video class="video-fluid cortarImg" autoplay loop muted>
+        <source src="https://mdbootstrap.com/img/video/Tropical.mp4" type="video/mp4" />
+      </video>
+    </mdb-carousel-item>
+  </mdb-carousel>
+  -->

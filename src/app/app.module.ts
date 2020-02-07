@@ -22,6 +22,8 @@ import { AlgorythmComponent } from './components/algorythm/algorythm.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatSliderModule } from '@angular/material/slider';
 import { AgmCoreModule } from '@agm/core';
+import { CarrouselComponent } from './components/shared/carrousel/carrousel.component';
+import { MapComponent } from './components/shared/map/map.component';
 
 
 @NgModule({
@@ -35,6 +37,8 @@ import { AgmCoreModule } from '@agm/core';
     FooterComponent,
     CoworkingComponent,
     AlgorythmComponent,
+    CarrouselComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,
