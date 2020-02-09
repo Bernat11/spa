@@ -9,7 +9,6 @@ node {
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
-        sh 'npm install'
         app = docker.build("bernat11/mycoworkings-frontend")
     }
 
