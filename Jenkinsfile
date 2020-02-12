@@ -2,6 +2,16 @@ node {
 
     def app
 
+    def buildImage(){
+        stage('Build image') {
+            /* This builds the actual image; synonymous to
+            * docker build on the command line */
+            echo 'Building image...'
+            sh 'sudo npm install'
+            app = docker.build("bernat11/mycoworkings-frontend")
+        }
+    }
+
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
         echo 'Clonning repository...'
@@ -35,14 +45,6 @@ node {
         }
     }
 
-    def buildImage(){
-        stage('Build image') {
-            /* This builds the actual image; synonymous to
-            * docker build on the command line */
-            echo 'Building image...'
-            sh 'sudo npm install'
-            app = docker.build("bernat11/mycoworkings-frontend")
-        }
-    }
+    
     
 }
