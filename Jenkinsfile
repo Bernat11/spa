@@ -2,7 +2,9 @@ node {
 
     def app
 
-    echo "${env.BRANCH_NAME}"
+    scmvars = checkout scm
+
+    echo scmvars.GIT_BRANCH
 
     if(env.BRANCH_NAME == 'develop') {
 
