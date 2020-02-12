@@ -12,7 +12,13 @@ node {
 
         echo 'Starting develop pipeline...'
 
-        buildImage()
+        stage('Build image') {
+            /* This builds the actual image; synonymous to
+            * docker build on the command line */
+            echo 'Building image...'
+            sh 'sudo npm install'
+            app = docker.build("bernat11/mycoworkings-frontend")
+        }
 
         stage('Test image') {
             /* Ideally, we would run a test framework against our image.
@@ -33,18 +39,11 @@ node {
                 app.push("latest")
             }
         }
-    }
 
-    
-    
-}
-
-def buildImage(){
-        stage('Build image') {
-            /* This builds the actual image; synonymous to
-            * docker build on the command line */
-            echo 'Building image...'
-            sh 'sudo npm install'
-            app = docker.build("bernat11/mycoworkings-frontend")
+        stage('Deploy to AWS') {
+            /* Deploy the pushed image in DockerHub into AWS EC2 instance.*/
+            
         }
     }
+    
+}
