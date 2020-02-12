@@ -2,11 +2,9 @@ node {
 
     def app
 
-    def branchName = getCurrentBranch()
-    echo 'Current branch is ' + branchName 
     echo "${env.BRANCH_NAME}"
 
-    if(branchName == 'develop') {
+    if(env.BRANCH_NAME == 'develop') {
 
         stage('Clone repository') {
             /* Let's make sure we have the repository cloned to our workspace */
