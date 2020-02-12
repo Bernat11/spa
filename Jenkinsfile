@@ -1,10 +1,10 @@
 node {
-    
+
     def app
 
-    echo "branch: ${env.BRANCH_NAME}"
+    echo 'branch: ' + env.BRANCH_NAME
 
-    if(${env.BRANCH_NAME} == 'develop') {
+    if(env.BRANCH_NAME == 'develop') {
 
         stage('Clone repository') {
             /* Let's make sure we have the repository cloned to our workspace */
