@@ -1,6 +1,9 @@
 node {
     def app
 
+    echo "${env.BUILD_NUMBER}"
+    echo "${env.BRANCH_NAME}"
+
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
         checkout scm
