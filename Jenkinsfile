@@ -10,13 +10,9 @@ node {
 
     if(scmvars.GIT_BRANCH == 'origin/develop') {
 
-        stage('Build image') {
-            /* This builds the actual image; synonymous to
-            * docker build on the command line */
-            echo 'Building image...'
-            sh 'sudo npm install'
-            app = docker.build("bernat11/mycoworkings-frontend")
-        }
+        echo 'Starting develop pipeline...'
+
+        buildImage()
 
         stage('Test image') {
             /* Ideally, we would run a test framework against our image.
@@ -36,6 +32,16 @@ node {
                 app.push("${env.BUILD_NUMBER}")
                 app.push("latest")
             }
+        }
+    }
+
+    def buildImage(){
+        stage('Build image') {
+            /* This builds the actual image; synonymous to
+            * docker build on the command line */
+            echo 'Building image...'
+            sh 'sudo npm install'
+            app = docker.build("bernat11/mycoworkings-frontend")
         }
     }
     
