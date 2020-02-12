@@ -2,20 +2,18 @@ node {
 
     def app
 
-    scmvars = checkout scm
+    stage('Clone repository') {
+        /* Let's make sure we have the repository cloned to our workspace */
+        echo 'Clonning repository...'
+        scmvars = checkout scm
+    }
 
-    echo scmvars.GIT_BRANCH
-
-    if(env.BRANCH_NAME == 'develop') {
-
-        stage('Clone repository') {
-            /* Let's make sure we have the repository cloned to our workspace */
-            checkout scm
-        }
+    if(scmvars.GIT_BRANCH == 'origin/develop') {
 
         stage('Build image') {
             /* This builds the actual image; synonymous to
             * docker build on the command line */
+            echo 'Building image...'
             sh 'sudo npm install'
             app = docker.build("bernat11/mycoworkings-frontend")
         }
@@ -33,6 +31,7 @@ node {
             * First, the incremental build number from Jenkins
             * Second, the 'latest' tag.
             * Pushing multiple tags is cheap, as all the layers are reused. */
+            echo 'Pushing image to DockerHub...'
             docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
                 app.push("${env.BUILD_NUMBER}")
                 app.push("latest")
