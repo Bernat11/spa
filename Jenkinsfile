@@ -1,7 +1,6 @@
 node('EC2-T2-MICRO') {
 
     def app
-    sh 'sudo su'
 
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
