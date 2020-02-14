@@ -1,6 +1,7 @@
 node('EC2-T2-MICRO') {
 
     def app
+    sh 'sudo su'
 
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
@@ -16,7 +17,6 @@ node('EC2-T2-MICRO') {
             /* This builds the actual image; synonymous to
             * docker build on the command line */
             echo 'Building image...'
-            sh 'sudo su'
             sh 'npm install'
             app = docker.build("bernat11/mycoworkings-frontend")
         }
