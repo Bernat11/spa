@@ -45,5 +45,9 @@ node {
             
         }
     }
+
+    if(scmvars.GIT_BRANCH == 'origin/develop') {
+        /* Master pipeline.*/
+    }
     
 }
