@@ -42,8 +42,8 @@ node('EC2-T2-MICRO') {
 
         stage('Deploy to AWS') {
             /* Deploy the pushed image in DockerHub into AWS EC2 instance.*/
-            sh 'docker rm registry.hub.docker.com/bernat11/mycoworkings-frontend:latest -f'
-            sh 'docker run -d -p 80:80 registry.hub.docker.com/bernat11/mycoworkings-frontend:latest'
+            sh 'docker rm frontend -f'
+            sh 'docker run --name frontend -d -p 80:80 registry.hub.docker.com/bernat11/mycoworkings-frontend:latest'
         }
     }
 
