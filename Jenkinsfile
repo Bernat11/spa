@@ -19,6 +19,8 @@ node('EC2-T2-MICRO') {
             echo 'Building image...'
             sh 'npm install'
             sh 'whoami'
+            sh 'sudo su'
+            sh 'whoami'
             app = docker.build("bernat11/mycoworkings-frontend")
         }
 
