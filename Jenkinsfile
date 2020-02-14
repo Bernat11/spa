@@ -16,7 +16,8 @@ node('EC2-T2-MICRO') {
             /* This builds the actual image; synonymous to
             * docker build on the command line */
             echo 'Building image...'
-            sh 'sudo npm install'
+            sh 'sudo su'
+            sh 'npm install'
             app = docker.build("bernat11/mycoworkings-frontend")
         }
 
