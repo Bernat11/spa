@@ -42,7 +42,7 @@ node('EC2-T2-MICRO') {
 
         stage('Deploy to AWS') {
             /* Deploy the pushed image in DockerHub into AWS EC2 instance.*/
-            sh 'ssh 18.218.217.244 -l ubuntu -i default-keypair-ohio.pem'
+            sh 'docker run -d -p 80:80 registry.hub.docker.com/bernat11/mycoworkings-frontend:latest'
         }
     }
 
