@@ -1,4 +1,4 @@
-node('EC2-T2-MICRO') {
+node('principal') {
 
     def app
 
