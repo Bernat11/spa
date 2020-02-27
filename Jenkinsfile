@@ -49,7 +49,7 @@ node {
         }
     }
 
-    if(scmvars.GIT_BRANCH == 'origin/develop') {
+    if(scmvars.GIT_BRANCH == 'origin/master') {
         /* Master pipeline.*/
     }
     
