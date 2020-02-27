@@ -1,4 +1,4 @@
-node('principal') {
+node {
 
     def app
 
