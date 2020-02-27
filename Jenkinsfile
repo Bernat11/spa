@@ -43,7 +43,13 @@ node {
         stage('Deploy to AWS') {
             node('EC2-T2-MICRO') {
                 /* Deploy the pushed image in DockerHub into AWS EC2 instance.*/
-                sh 'docker rm frontend -f'
+                script {
+                    try {
+                        sh 'docker rm frontend -f'
+                    } catch (err) {
+                        echo 'Cannot remove image... frontend was not deployed into this instance...'
+                    }
+                }
                 sh 'docker run --name frontend -d -p 80:80 registry.hub.docker.com/bernat11/mycoworkings-frontend:latest'
             }
         }
