@@ -50,6 +50,7 @@ node {
                         echo 'Cannot remove image... frontend was not deployed into this instance...'
                     }
                 }
+                sh 'docker pull registry.hub.docker.com/bernat11/mycoworkings-frontend:latest'
                 sh 'docker run --name frontend -d -p 80:80 registry.hub.docker.com/bernat11/mycoworkings-frontend:latest'
             }
         }
