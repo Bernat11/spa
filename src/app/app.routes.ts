@@ -3,12 +3,14 @@ import { HomeComponent } from './components/home/home.component';
 import { CoworkingsComponent } from './components/coworkings/coworkings.component';
 import { AlgorythmComponent } from './components/algorythm/algorythm.component';
 import { CoworkingComponent } from './components/coworking/coworking.component';
+import { ComparatorDashboardComponent } from './components/comparator-dashboard/comparator-dashboard.component';
 
 const APP_ROUTES: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'coworkings', component: CoworkingsComponent },
     { path: 'algorythm', component: AlgorythmComponent },
     { path: 'coworking/:id', component: CoworkingComponent },
+    { path: 'compare', component: ComparatorDashboardComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 

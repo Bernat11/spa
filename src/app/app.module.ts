@@ -24,6 +24,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { AgmCoreModule } from '@agm/core';
 import { CarrouselComponent } from './components/shared/carrousel/carrousel.component';
 import { MapComponent } from './components/shared/map/map.component';
+import { ComparatorDashboardComponent } from './components/comparator-dashboard/comparator-dashboard.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { MapComponent } from './components/shared/map/map.component';
     AlgorythmComponent,
     CarrouselComponent,
     MapComponent,
+    ComparatorDashboardComponent,
   ],
   imports: [
     BrowserModule,
