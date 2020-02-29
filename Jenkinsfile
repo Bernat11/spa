@@ -16,7 +16,7 @@ node {
             /* This builds the actual image; synonymous to
             * docker build on the command line */
             echo 'Building image...'
-            sh 'npm install'
+            sh 'sudo npm install'
             app = docker.build("bernat11/mycoworkings-frontend")
         }
 
