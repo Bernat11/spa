@@ -1,5 +1,6 @@
 nav {
-    height: 5vh;
+    min-height: 5vh;
+
 }
 
 .navbar-color {
@@ -8,4 +9,37 @@ nav {
 
 .font-color {
     color: white;
+}
+
+@media (min-width: 360px){
+    .navbar-expand-custom {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+    .navbar-expand-custom .navbar-nav {
+        flex-direction: row;
+    }
+    .navbar-expand-custom .navbar-nav .nav-link {
+        padding-right: .5rem;
+        padding-left: .5rem;
+    }
+    .navbar-expand-custom .navbar-collapse {
+        display: flex!important;
+    }
+    .navbar-expand-custom .navbar-toggler {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    nav.font {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    nav.font {
+        font-size: 3.5vw;
+    }
 }

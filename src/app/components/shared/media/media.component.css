@@ -1,21 +1,36 @@
 #logo{
-    height: 80px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    min-height: 37.5px;
+    max-height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #social-media{
     float: right;
-    margin-top: 30px;
+    margin-top: 22.5px;
     margin-right: 5%;
 }
 
 .media{
-    padding-left: 12px;
     display: inline-block;
 }
 
 .color{
     background-color: #ef5c4e;
-    height: 8vh;
+}
+
+.font-color{
+    color: white;
+}
+
+@media screen and (max-width: 8000px) {
+    a {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    a {
+        margin-right: 10px;
+    }
 }
