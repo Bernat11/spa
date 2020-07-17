@@ -25,6 +25,7 @@ import { AgmCoreModule } from '@agm/core';
 import { CarrouselComponent } from './components/shared/carrousel/carrousel.component';
 import { MapComponent } from './components/shared/map/map.component';
 import { ComparatorDashboardComponent } from './components/comparator-dashboard/comparator-dashboard.component';
+import { RegisterCoworkingComponent } from './components/register-coworking/register-coworking.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { ComparatorDashboardComponent } from './components/comparator-dashboard/
     CarrouselComponent,
     MapComponent,
     ComparatorDashboardComponent,
+    RegisterCoworkingComponent,
   ],
   imports: [
     BrowserModule,
