@@ -13,9 +13,9 @@ export class CoworkingsService {
     this.httpClient = httpClient;
     this.getCoworkings();
   }
-
+  
   getCoworkings():Observable<Object>{
-    return this.httpClient.get(`http://localhost:8070/api/v1/coworkings`);
+    return this.httpClient.get(`http://localhost:8070`);
   }
 
   getCoworking( id: string ):Observable<Object>{
