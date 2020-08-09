@@ -51,85 +51,9 @@
   </div>
 
   <h2>SERVICES</h2>
-  <div class="form-row">
-    <div class="col">
-      <label for="temporal">Bicicleta</label>
-      <mdb-checkbox [default]="true"></mdb-checkbox>
-    </div>
-    <div class="col">
-      <label for="temporal">Terraza</label>
-      <mdb-checkbox [default]="true"></mdb-checkbox>
-    </div>
-    <div class="col">
-      <label for="temporal">Sala de reuniones</label>
-      <mdb-checkbox [default]="true"></mdb-checkbox>
-    </div>
-    <div class="col">
-      <label for="temporal">Recepción/soporte</label>
-      <mdb-checkbox [default]="true"></mdb-checkbox>
-    </div>
-    <div class="col">
-      <label for="temporal">Internet</label>
-      <mdb-checkbox [default]="true"></mdb-checkbox>
-    </div>
-    <div class="col">
-      <label for="temporal">Agua/café</label>
-      <mdb-checkbox [default]="true"></mdb-checkbox>
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="col">
-      <label for="temporal">Limpieza</label>
-      <mdb-checkbox [default]="true"></mdb-checkbox>
-      </div>
-    <div class="col">
-      <label for="temporal">Impresión/copisteria</label>
-      <mdb-checkbox [default]="true"></mdb-checkbox>
-    </div>
-    <div class="col">
-      <label for="temporal">Horario</label>
-      <mdb-checkbox [default]="true"></mdb-checkbox>
-    </div>
-    <div class="col">
-      <label for="temporal">Domicilio fiscal</label>
-      <mdb-checkbox [default]="true"></mdb-checkbox>
-    </div>
-    <div class="col">
-      <label for="temporal">Espacio cocina</label>
-      <mdb-checkbox [default]="true"></mdb-checkbox>
-    </div>
-    <div class="col">
-      <label for="temporal">Correo empresa</label>
-      <mdb-checkbox [default]="true"></mdb-checkbox>
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="col">
-      <label for="temporal">Parking</label>
-      <mdb-checkbox [default]="true"></mdb-checkbox>
-    </div>
-    <div class="col">
-      <label for="temporal">Team building</label>
-      <mdb-checkbox [default]="true"></mdb-checkbox>
-    </div>
-    <div class="col">
-      <label for="temporal">Ducha</label>
-      <mdb-checkbox [default]="true"></mdb-checkbox>
-    </div>
-    <div class="col">
-      <label for="temporal">Sala bienestar</label>
-      <mdb-checkbox [default]="true"></mdb-checkbox>
-    </div>
-    <div class="col">
-      <label for="temporal">Mascotas</label>
-      <mdb-checkbox [default]="true"></mdb-checkbox>
-    </div>
-    <div class="col">
-      <label for="temporal">Desayunos</label>
-      <mdb-checkbox [default]="true"></mdb-checkbox>
-    </div>
-  </div>
+  <app-coworking-services></app-coworking-services>
 
+  
   <h2>LOCATION</h2>
   <agm-map [zoom]="13" [latitude]="lat" [longitude]="lng">
     <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>

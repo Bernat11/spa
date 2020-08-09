@@ -3,6 +3,7 @@ import { NgModule, NO_ERRORS_SCHEMA  } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 // Rutas
 import { APP_ROUTING } from './app.routes';
@@ -26,6 +27,11 @@ import { CarrouselComponent } from './components/shared/carrousel/carrousel.comp
 import { MapComponent } from './components/shared/map/map.component';
 import { ComparatorDashboardComponent } from './components/comparator-dashboard/comparator-dashboard.component';
 import { RegisterCoworkingComponent } from './components/register-coworking/register-coworking.component';
+import { CoworkingServicesComponent } from './components/register-coworking/coworking-services/coworking-services.component';
+import { CoworkingDescriptionComponent } from './components/register-coworking/coworking-description/coworking-description.component';
+import { CoworkingLocationComponent } from './components/register-coworking/coworking-location/coworking-location.component';
+import { CoworkingContactComponent } from './components/register-coworking/coworking-contact/coworking-contact.component';
+import { CoworkingSpacesComponent } from './components/register-coworking/coworking-spaces/coworking-spaces.component';
 
 
 @NgModule({
@@ -43,8 +49,14 @@ import { RegisterCoworkingComponent } from './components/register-coworking/regi
     MapComponent,
     ComparatorDashboardComponent,
     RegisterCoworkingComponent,
+    CoworkingServicesComponent,
+    CoworkingDescriptionComponent,
+    CoworkingLocationComponent,
+    CoworkingContactComponent,
+    CoworkingSpacesComponent,
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     MDBBootstrapModule.forRoot(),

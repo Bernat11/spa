@@ -1,0 +1,30 @@
+<div class="form-group">
+    <label for="cwName">Nombre</label>
+    <input required minlength="3" ngModel name="cwName" #cwName="ngModel" type="cwName" class="form-control" (change)="log(cwName)">
+    <div class="alert alert-danger" *ngIf="cwName.touched && !cwName.valid">
+        <div *ngIf="cwName.errors.required">Coworking name is required</div>
+        <div *ngIf="cwName.errors.minlength">Coworking name should be minumum 3 characters</div>
+    </div>
+</div>
+<div class="form-group">
+    <label for="cwDescription">Descripcion</label>
+    <textarea required minlength="25" ngModel name="cwDescription" #cwDescription="ngModel" type="cwDescription" class="form-control" rows="4"></textarea>
+    <div class="alert alert-danger" *ngIf="cwDescription.touched && !cwDescription.valid">
+        <div *ngIf="cwDescription.errors.required">Coworking description is required</div>
+        <div *ngIf="cwDescription.errors.minlength">Coworking description should be minumum 25 characters</div>
+    </div>
+</div>
+<div class="form-row">
+    <div class="col">
+        <label for="cwOpeningDate">Fecha de apertura</label>
+        <input type="date" ngModel name="cwOpeningDate" id="" class="form-control col-sm-6">
+    </div>
+    <div class="col">
+        <label for="cwOpenHour">Hora de apertura</label>
+        <input type="time" ngModel name="cwOpenHour" id="" class="form-control col-sm-6">
+    </div>
+    <div class="col">
+        <label for="cwCloseHour">Hora de cierre</label>
+        <input type="time" ngModel name="cwCloseHour" id="" class="form-control col-sm-6">
+    </div>
+</div>

@@ -1,43 +1,18 @@
 <form>
-    <h2>REGISTER COWORKING</h2>
-    <div class="form-row">
-        DESCRIPTION
-    </div>
-    <div class="form-row">
-        <label>Name</label>
-        <div class="col">
-            <input type="text" id="cw-name" name="fname"><br>
-        </div>
-        <div class="col">
-            <label>Description</label>
-            <div class="col">
-                <input type="text" id="cw-description" name="fname"><br>
-            </div>
-        </div>
-    </div>
-    <div class="form-row">
-        <label>Opening date</label>
-        <div class="col">
-            <input type="date" id="opening-date" name="fname"><br>
-        </div>
-    </div>
-    <div class="form-row">
-        <label>Opening hour</label>
-        <div class="col">
-            <input type="time" id="opening-date" name="fname"><br>
-        </div>
-    </div>
-    <div class="form-row">
-        <label>Cose hour</label>
-        <div class="col">
-            <input type="time" id="opening-date" name="fname"><br>
-        </div>
-    </div>
+    <h3>Acerca del coworking</h3>
+    <app-coworking-description></app-coworking-description>
 
+    <h3>Ubicación</h3>
+    <app-coworking-location></app-coworking-location>
 
-    <div class="form-row">
-        LOCATION
-    </div>
+    <h3>Contacto</h3>
+    <app-coworking-contact></app-coworking-contact>
 
-    <button type="button" class="btn btn-primary">SEND</button>
+    <h3>Services</h3>
+    <app-coworking-services></app-coworking-services>
+
+    <h3>Spaces</h3>
+    <app-coworking-spaces></app-coworking-spaces>
+
+    <button class="btn btn-primary mt-5">Submit</button>
 </form>
